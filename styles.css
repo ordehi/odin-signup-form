@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
+:root {
+  --logo-bg: rgba(0, 0, 0, 0.3);
+  --logo-color: white;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -20,24 +25,66 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1;
+  flex-grow: 0;
   background: url(./assets/cover.jpg) center no-repeat;
 }
 
 .logo {
   position: relative;
-  top: 30%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
+  top: 20%;
+  background-color: var(--logo-bg);
+  color: var(--logo-color);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-img {
-  max-width: 30%;
+  max-width: max(25%, 100px);
+}
+
+.logo-txt {
+  font-size: max(5vw, 2rem);
+}
+
+.attribution {
+  text-align: center;
+  color: var(--logo-color);
+  background-color: var(--logo-bg);
+}
+
+.attribution a {
+  color: var(--logo-color);
 }
 
 .signup {
-  flex-grow: 3;
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.signup-form-inputs {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.signup-form label {
+  display: block;
+}
+
+@media screen and (max-width: 860px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .cover {
+    flex-grow: 4;
+    justify-content: center;
+  }
+
+  .attribution {
+    display: none;
+  }
 }
