@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cover">
+        <div class="logo">
+          <img src="./assets/odin-lined.png" alt="logo" class="logo-img" />
+          <div class="logo-txt">Odin</div>
+        </div>
+        <div class="attribution">
+          Photo by <a href="">Ryan Ancill</a> on <a href="">Unsplash</a>
+        </div>
+      </div>
+      <div class="signup">
+        <div class="description">
+          <p>
+            This is not a real online service! But you'll pay for it anyway,
+            right?
+          </p>
+          <p>You <em>know</em> you want to.</p>
+        </div>
+        <form action="#" class="signup-form">
+          <legend class="cta">Let's do this!</legend>
+          <ul>
+            <li>
+              <label for="fname">First name</label>
+              <input type="text" name="fname" id="fname" />
+            </li>
+            <li>
+              <label for="lname">Last Name</label>
+              <input type="text" name="lname" id="lname" />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </li>
+            <li>
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" />
+            </li>
+            <li>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+            </li>
+            <li>
+              <label for="c_password">Confirm Password</label>
+              <input type="password" name="c_password" id="c_password" />
+            </li>
+          </ul>
+          <div class="create">
+            <button type="submit">Create Account</button>
+          </div>
+          <div class="already">
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
