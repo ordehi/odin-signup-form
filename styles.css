@@ -100,24 +100,26 @@ body {
   padding-top: 30px;
   padding-bottom: 50px;
   box-shadow: var(--general-shadow);
+  padding-right: 20vw;
 }
 
 .signup-form-inputs {
   display: flex;
   flex-wrap: wrap;
-  max-width: 70%;
+  min-width: 100%;
   list-style-type: none;
 }
 
 .signup-form-inputs li {
-  width: min(350px, 50%);
+  width: max(250px, 50%);
   margin: 15px 0;
 }
 
 .signup-form-inputs input {
-  min-width: 80%;
+  min-width: 90%;
   padding: var(--input-radius);
   border-radius: 5px;
+  border: 2px solid #E5E7EB;
 }
 
 .signup-form label {
@@ -133,6 +135,13 @@ body {
   color: white;
   background-color: var(--create-btn-color);
   box-shadow: var(--general-shadow);
+  cursor: pointer;
+}
+
+.signup-form-login a {
+  font-weight: 700;
+  color: var(--create-btn-color);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 840px) {
