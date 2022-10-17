@@ -3,6 +3,11 @@
 :root {
   --logo-bg: rgba(0, 0, 0, 0.3);
   --logo-color: white;
+  --signup-el-pd: 0 50px;
+  --signup-el-pd-sm: 10px 20px;
+  --create-btn-color: #596D48;
+  --input-radius: 5px;
+  --general-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 *, *::before, *::after {
@@ -61,30 +66,115 @@ body {
   flex-grow: 4;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  background-color: ;
+}
+
+.signup-description, .signup-form-inputArea, .signup-form-create, .signup-form-login {
+  padding: var(--signup-el-pd);
+}
+
+.signup-description {
+  padding-top: 20%;
+  padding-bottom: 50px;
+}
+
+.signup-description p {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.signup-form { 
+  width: 100%;
+  flex-grow: 1;
+}
+
+.signup-form-cta {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.signup-form-inputArea {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  box-shadow: var(--general-shadow);
 }
 
 .signup-form-inputs {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 70%;
   list-style-type: none;
+}
+
+.signup-form-inputs li {
+  width: min(350px, 50%);
+  margin: 15px 0;
+}
+
+.signup-form-inputs input {
+  min-width: 80%;
+  padding: var(--input-radius);
+  border-radius: 5px;
 }
 
 .signup-form label {
   display: block;
 }
 
-@media screen and (max-width: 860px) {
+.signup-form-create button {
+  padding: 10px 50px;
+  margin: 20px 0;
+  border: 0;
+  border-radius: var(--input-radius);
+  font-weight: 700;
+  color: white;
+  background-color: var(--create-btn-color);
+  box-shadow: var(--general-shadow);
+}
+
+@media screen and (max-width: 840px) {
   .container {
     flex-direction: column;
   }
 
   .cover {
-    flex-grow: 4;
     justify-content: center;
+    max-height: 20vh;
+  }
+
+  .logo {
+    max-height: 20vh;
+  }
+
+  .logo-img {
+    width: max(80px, 15vw);
+    padding: 10px;
   }
 
   .attribution {
     display: none;
+  }
+
+  .signup-description {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .signup-form-inputs li {
+    margin: 5px 0;
+    width: min(250px, 100%);
+  }
+
+  .signup-form-inputs input {
+    width: max(200px, 100%);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .signup-description, .signup-form-inputArea, .signup-form-create, .signup-form-login {
+    padding: var(--signup-el-pd-sm);
   }
 }
