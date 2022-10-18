@@ -121,7 +121,14 @@ body {
   width: 90%;
   padding: var(--input-radius);
   border-radius: 5px;
-  border: 2px solid #E5E7EB;
+  box-sizing: border-box;
+  outline: none;
+  
+}
+
+.signup-form-inputs input:focus {
+  border: 2px solid rgb(71, 184, 255);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .signup-form label {
