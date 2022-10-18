@@ -8,6 +8,7 @@
   --create-btn-color: #596D48;
   --input-radius: 5px;
   --general-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  --btn-hover-color: #9eaa8f;
 }
 
 *, *::before, *::after {
@@ -117,8 +118,7 @@ body {
 }
 
 .signup-form-inputs input {
-  min-width: 200px;
-  width: 90%;
+  width: clamp(200px, 90%, 330px);
   padding: var(--input-radius);
   border-radius: 5px;
   box-sizing: border-box;
@@ -127,7 +127,7 @@ body {
 }
 
 .signup-form-inputs input:focus {
-  border: 2px solid rgb(71, 184, 255);
+  border: 2px solid var(--btn-hover-color);;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -147,10 +147,18 @@ body {
   cursor: pointer;
 }
 
+.signup-form-create button:hover {
+  background-color: var(--btn-hover-color);
+}
+
 .signup-form-login a {
   font-weight: 700;
   color: var(--create-btn-color);
   text-decoration: none;
+}
+
+.signup-form-login a:hover {
+  color: var(--btn-hover-color);
 }
 
 @media screen and (max-width: 840px) {

@@ -26,25 +26,25 @@
           </p>
           <p>You <em>know</em> you want to.</p>
         </div>
-        <form action="#" class="signup-form">
+        <form action="#" class="signup-form" id="signupForm">
           <div class="signup-form-inputArea">
             <legend class="signup-form-cta">Let's do this!</legend>
             <ul class="signup-form-inputs">
               <li>
                 <label for="fname">First name</label>
-                <input type="text" name="fname" id="fname" />
+                <input type="text" name="fname" id="fname" required />
               </li>
               <li>
                 <label for="lname">Last Name</label>
-                <input type="text" name="lname" id="lname" />
+                <input type="text" name="lname" id="lname" required />
               </li>
               <li>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" required />
               </li>
               <li>
                 <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phone" />
+                <input type="tel" name="phone" id="phone" required />
               </li>
               <li>
                 <label for="password">Password</label>
@@ -53,6 +53,7 @@
                   name="password"
                   id="password"
                   class="error"
+                  required
                 />
               </li>
               <li>
@@ -62,6 +63,7 @@
                   name="c_password"
                   id="c_password"
                   class="error"
+                  required
                 />
               </li>
             </ul>
@@ -75,5 +77,6 @@
         </form>
       </div>
     </div>
+    <script src="validate.js"></script>
   </body>
 </html>
