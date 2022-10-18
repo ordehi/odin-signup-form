@@ -105,17 +105,20 @@ body {
 .signup-form-inputs {
   display: flex;
   flex-wrap: wrap;
-  min-width: 100%;
+  max-width: 800px;
   list-style-type: none;
+  justify-content: space-between;
 }
 
 .signup-form-inputs li {
-  width: max(250px, 50%);
+  width: 50%;
+  min-width: 200px;
   margin: 15px 0;
 }
 
 .signup-form-inputs input {
-  min-width: 90%;
+  min-width: 200px;
+  width: 90%;
   padding: var(--input-radius);
   border-radius: 5px;
   border: 2px solid #E5E7EB;
